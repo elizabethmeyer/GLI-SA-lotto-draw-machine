@@ -1,6 +1,9 @@
-# lotto-draw-machine
+_I misread the original instructions as "The application should be a single page **application**". So that's what I did. At least it gave me a good excuse to get to know and play with Vue.js. ~Elizabeth_
 
-> GLI-SA technical test by Elizabeth Meyer
+# Lotto Draw Machine
+
+> GLI-SA technical assesment by Elizabeth Meyer
+> 17 February 2017
 
 The application should be a single page, with two buttons. The buttons consist of a Play button
 and an Export All button.

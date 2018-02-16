@@ -3,8 +3,8 @@
     <div class="row">
       <h1>{{ appTitle }}</h1>
     </div>
-    <drawLotto></drawLotto>
-    <drawHistory></drawHistory>
+    <drawLotto v-on:newdraw="triggerDraw"></drawLotto>
+    <drawHistory :draw-data="drawData"></drawHistory>
   </div>
 </template>
 
@@ -15,8 +15,14 @@ export default {
   data () {
     return {
       appTitle: 'Lotto Draw Machine',
+      drawData: {}
     }
-  }
+  },
+  methods: {
+    triggerDraw: function (newDraw) {
+      this.drawData = newDraw
+    },
+  },  
 }
 </script>
 
