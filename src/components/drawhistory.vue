@@ -2,9 +2,10 @@
 <template>
   <div class="draw-history">
     <div class="row">    
-      <b-button variant="secondary" size="sm" class="mt-5 col-sm-2 offset-sm-10">Export All</b-button>
+      <b-button href="drawresults.csv" variant="secondary" size="sm" class="mt-5 col-sm-2 offset-sm-10">Export All</b-button>
     </div>
     <div class="row">
+      {{drawData}}
       <h2>Last 10 draw results:</h2>
       <b-table striped hover :items="this.last10Draws"></b-table>
     </div>
@@ -18,11 +19,23 @@ export default {
     'drawData'
   ],
   watch: { 
-    drawData: function(newVal, oldVal) { 
-      console.log(this.last10Draws)
-      this.last10Draws.unshift(JSON.parse(newVal))
-      if (this.last10Draws.length = 11)
+    drawData: function(newVal, oldVal) {    
+      newVal = JSON.parse(newVal)
+      this.last10Draws.unshift(newVal)
+      if (this.last10Draws.length > 10)
         this.last10Draws.pop()
+      this.writeToCSV(newVal)
+    }
+  },
+  methods: {
+    writeToCSV (drawData) {
+      const url = 'http://localhost/GLI-SA/lotto-draw-api/index.php/writeToCSV/'   
+
+      $.ajax({
+          url: url,
+          type: 'POST',
+          data: drawData
+      })
     }
   },
   data: function () {

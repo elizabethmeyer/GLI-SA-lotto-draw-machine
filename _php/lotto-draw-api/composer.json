@@ -1,0 +1,17 @@
+{
+    "name": "elizabeth.meyer/lotto-draw-api",
+    "description": "Lotto Draw API",
+    "type": "project",
+    "require": {
+        "slim/slim": "^3.9"
+    },
+    "require-dev": {
+        "slim/slim": "^3.9"
+    },
+    "authors": [
+        {
+            "name": "eelizabeth.meyer",
+            "email": "mailme@elizabethmeyer.co.za"
+        }
+    ]
+}
