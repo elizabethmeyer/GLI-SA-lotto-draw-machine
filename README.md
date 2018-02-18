@@ -1,9 +1,15 @@
+> GLI-SA technical assesment by Elizabeth Meyer 18 February 2017
+
+**Working example implemented here: http://www.lightinside.co.za/elizabethmeyer/lotto-draw-machine/**
+
 _I misread the original instructions as "The application should be a single page **application**". So that's what I did. At least it gave me a good excuse to get to know and play with Vue.js. ~Elizabeth_
 
-# Lotto Draw Machine
+# Project Information
+**This is a Vue Project with a PHP API for writing to CSV.**
 
-> GLI-SA technical assesment by Elizabeth Meyer
-> 17 February 2017
+The working distributable can be found in the **dist** folder and the PHP API for writing to CSV in the **_php** folder.
+
+# Assesment Instructions: Lotto Draw Machine
 
 The application should be a single page, with two buttons. The buttons consist of a Play button
 and an Export All button.

@@ -2,10 +2,9 @@
 <template>
   <div class="draw-history">
     <div class="row">    
-      <b-button href="drawresults.csv" variant="secondary" size="sm" class="mt-5 col-sm-2 offset-sm-10">Export All</b-button>
+      <b-button href="http://www.lightinside.co.za/elizabethmeyer/lotto-draw-machine/lotto-csv-api/drawresults.csv" variant="secondary" size="sm" class="mt-5 col-sm-2 offset-sm-10">Export All</b-button>
     </div>
     <div class="row">
-      {{drawData}}
       <h2>Last 10 draw results:</h2>
       <b-table striped hover :items="this.last10Draws"></b-table>
     </div>
@@ -29,7 +28,7 @@ export default {
   },
   methods: {
     writeToCSV (drawData) {
-      const url = 'http://localhost/GLI-SA/lotto-draw-api/index.php/writeToCSV/'   
+      const url = 'http://www.lightinside.co.za/elizabethmeyer/lotto-draw-machine/lotto-csv-api/writeToCSV/'   
 
       $.ajax({
           url: url,

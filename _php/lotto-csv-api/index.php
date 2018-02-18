@@ -12,20 +12,6 @@ $configSlim['addContentLengthHeader'] = false;
 $httpApp = new \Slim\App(['settings' => $configSlim]);
 $CSVHandler = new CSVHandler;
 
-$httpApp->get('/hello/{name}', function (Request $request, Response $response, array $args) {
-    $name = $args['name'];
-    $response->getBody()->write("Hello, $name");
-
-    return $response;
-});
-
-$httpApp->get('/getFromCSV/{linesToGet}', function (Request $request, Response $response, array $args) {
-    $linesToGet = $args['linesToGet'];
-    $response->getBody()->write("Hello, $name");
-
-    return $response;
-});
-
 $httpApp->post('/writeToCSV/', function (Request $request, Response $response, array $args) {
   $requestData = $request->getParsedBody();
   $CSVHandler = new CSVHandler; 
